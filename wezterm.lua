@@ -22,22 +22,22 @@ config.font = wezterm.font("JetBrains Mono")
 config.keys = {
 	{
 		key = "LeftArrow",
-		mods = "CTRL|SHIFT",
+		mods = "ALT",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "RightArrow",
-		mods = "CTRL|SHIFT",
+		mods = "ALT",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "UpArrow",
-		mods = "CTRL|SHIFT",
+		mods = "ALT",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "DownArrow",
-		mods = "CTRL|SHIFT",
+		mods = "ALT",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
@@ -56,19 +56,21 @@ config.keys = {
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
-        key = "LeftArrow",
-        mods = "ALT|SHIFT",
-        action = act.AdjustPaneSize { 'Left', 2 },
-    },
+		key = "LeftArrow",
+		mods = "ALT|SHIFT",
+		action = act.AdjustPaneSize({ "Left", 2 }),
+	},
 	{
-        key = "RightArrow",
-        mods = "ALT|SHIFT",
-        action = act.AdjustPaneSize { 'Right', 2 },
-    },
+		key = "RightArrow",
+		mods = "ALT|SHIFT",
+		action = act.AdjustPaneSize({ "Right", 2 }),
+	},
+	{ key = "{", mods = "SHIFT|ALT", action = act.MoveTabRelative(-1) },
+	{ key = "}", mods = "SHIFT|ALT", action = act.MoveTabRelative(1) },
 }
 
+-- CTRL+ALT + number to activate that tab
 for i = 1, 9 do
-	-- CTRL+ALT + number to activate that tab
 	table.insert(config.keys, {
 		key = tostring(i),
 		mods = "ALT",
