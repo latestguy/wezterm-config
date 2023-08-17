@@ -65,6 +65,16 @@ config.keys = {
 		mods = "ALT|SHIFT",
 		action = act.AdjustPaneSize({ "Right", 2 }),
 	},
+	{
+		key = "UpArrow",
+		mods = "ALT|SHIFT",
+		action = act.AdjustPaneSize({ "Up", 2 }),
+	},
+	{
+		key = "DownArrow",
+		mods = "ALT|SHIFT",
+		action = act.AdjustPaneSize({ "Down", 2 }),
+	},
 	{ key = "{", mods = "SHIFT|ALT", action = act.MoveTabRelative(-1) },
 	{ key = "}", mods = "SHIFT|ALT", action = act.MoveTabRelative(1) },
 }
