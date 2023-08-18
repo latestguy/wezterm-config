@@ -18,6 +18,7 @@ end
 config.color_scheme = "cyberpunk"
 
 config.font = wezterm.font("JetBrains Mono")
+config.enable_scroll_bar = true
 
 config.keys = {
 	{
