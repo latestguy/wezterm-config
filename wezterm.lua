@@ -17,7 +17,18 @@ end
 -- config.color_scheme = "AdventureTime"
 config.color_scheme = "cyberpunk"
 
-config.font = wezterm.font("JetBrains Mono")
+-- config.font = wezterm.font("JetBrains Mono")
+config.font =  wezterm.font_with_fallback({
+        "JetBrains Mono",
+        "DroidSansMono Nerd Font",
+        "FiraCode Nerd Font",
+        "Noto Sans CJK SC",
+        "DejaVu Sans Mono",
+        "Noto Sans Symbols2",
+        "Noto Serif Grantha",
+        "Noto Sans Gujarati UI",
+})
+
 config.enable_scroll_bar = true
 
 config.keys = {
